@@ -1,0 +1,16 @@
+﻿@using Blazorise.Components
+
+<div>
+	<SelectList TItem="ContainerKind"
+				TValue="ContainerKind"
+				Data="@ContainerKinds"
+				TextField="@((item)=>item.ToString("F"))"
+				ValueField="@((item)=>item)"
+				SelectedValue="Data.Kind"
+				SelectedValueChanged="KindChanged" />
+
+
+	<div>
+		<NumericPicker @bind-Value="Data.Value" Min="@Minimum" Max="@Maximum" />
+	</div>
+</div>
